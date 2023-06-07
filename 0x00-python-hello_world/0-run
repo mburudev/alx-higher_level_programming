@@ -1,1 +1,2 @@
-trial 1 
+#!/bin/bash
+python3 "$PYFILE" 
