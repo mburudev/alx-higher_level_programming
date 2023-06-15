@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for letter in range(122, 64, -1):
-    print("{}{}".format(chr(letter), chr(letter-32)), end="")
+a = 0
+for i in range(122, 96, -1):
+    print("{}".format(chr(i - a)), end="")
+    a = 32 if a == 0 else 0
