@@ -6,6 +6,9 @@ if __name__ == "__main__":
 
     args = len(sys.argv) - 1
 
+    if args == 0:
+        exit(1)
+
     i = 0
     for i in range(args):
         a = int(sys.argv[1])
@@ -21,3 +24,4 @@ if __name__ == "__main__":
         print("{} / {} = {}".format(a, b, div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
