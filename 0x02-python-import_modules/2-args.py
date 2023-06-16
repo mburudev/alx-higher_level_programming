@@ -8,6 +8,7 @@ if __name__ == "__main__":
         print("{} arguments.".format(args))
     elif args == 1:
         print("{} argument:".format(args))
+        print("1: {}".format(sys.argv[1]))
     else:
         print("{} arguments:".format(args))
         i = 0
