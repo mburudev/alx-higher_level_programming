@@ -10,18 +10,19 @@
  */
 int is_palindrome(listint_t **head)
 {
+	listint_t *slow, *fast, *prev, *next;
     /* Empty list is considered a palindrome */
 	if (*head == NULL)
 		return (1);
 	/* Find the middle node using two pointers (slow and fast) */
-	listint_t *slow = *head;
-	listint_t *fast = *head;
-	listint_t *prev = NULL;
+	slow = *head;
+	fast = *head;
+	prev = NULL;
 
 	while (fast != NULL && fast->next != NULL)
 	{
 		fast = fast->next->next;
-		listint_t *next = slow->next;
+		next = slow->next;
 
 		slow->next = prev;
 		prev = slow;
