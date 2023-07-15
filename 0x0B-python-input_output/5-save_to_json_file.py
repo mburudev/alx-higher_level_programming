@@ -22,4 +22,4 @@ def save_to_json_file(my_obj, filename):
         with open(filename, 'w') as file:
             json.dump(my_obj, file)
     except TypeError:
-        print("An error occurred while serializing the object.")
+        print("Object of type set is not JSON serializable")
