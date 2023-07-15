@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 """
-This module provides functions for reading and printing the contents of a text file.
+Provides functions for reading and printing the contents of a text file.
 
 Author: Ian Mburu
 """
+
 
 def read_file(filename=""):
     """
     Read the contents of a text file and print them to stdout.
 
     Args:
-        filename (str): The name of the text file to be read. Default is an empty string.
+        filename (str): Name of the text file to be read.
 
     Returns:
         None
