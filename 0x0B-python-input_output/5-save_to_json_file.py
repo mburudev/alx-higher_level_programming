@@ -18,8 +18,5 @@ def save_to_json_file(my_obj, filename):
     Returns:
         None
     """
-    try:
-        with open(filename, 'w') as file:
-            json.dump(my_obj, file)
-    except TypeError:
-        print("Object of type set is not JSON serializable")
+    with open(filename, 'w') as file:
+        file.write(json.dumps(my_obj))
