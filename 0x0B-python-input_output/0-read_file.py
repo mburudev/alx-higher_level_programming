@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 This module provides functions for reading and printing the contents of a text file.
 
