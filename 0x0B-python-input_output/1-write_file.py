@@ -5,9 +5,10 @@ This module provides functions for writing to a text file.
 Author: Ian Mburu
 """
 
+
 def write_file(filename="", text=""):
     """
-    Writes a string to a text file (UTF8) and returns the number of characters written.
+    Writes a string to a text file, returns the number of characters written.
 
     Args:
         filename (str): The name of the file to write.
@@ -16,11 +17,5 @@ def write_file(filename="", text=""):
     Returns:
         int: The number of characters written to the file.
     """
-    try:
-        with open(filename, "w", encoding="utf8") as file:
-            file.write(text)
-            return len(text)
-    except IOError:
-        # Handle any file I/O errors here
-        print("An error occurred while writing to the file.")
-        return 0
+    with open(filename, 'w') as f:
+        return f.write(text)
