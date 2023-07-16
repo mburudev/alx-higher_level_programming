@@ -3,6 +3,7 @@
 Provides a function that returns the dictionary description.
 """
 
+
 def class_to_json(obj):
     """
     Returns a dictionary description of an object for JSON serialization.
