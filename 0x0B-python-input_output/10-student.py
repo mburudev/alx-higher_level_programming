@@ -15,7 +15,7 @@ class Student:
         Retrieves a dictionary representation of a Student instance.
 
         Args:
-            attrs (list): List of attribute names to be retrieved. Default is None.
+            attrs (list): List of attribute names to be retrieved.
 
         Returns:
             dict: A dictionary representation of the Student instance.
@@ -27,4 +27,3 @@ class Student:
             if hasattr(self, attr):
                 json_dict[attr] = getattr(self, attr)
         return json_dict
-
