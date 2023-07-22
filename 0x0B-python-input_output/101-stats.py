@@ -20,7 +20,7 @@ if __name__ == "__main__":
                 codes[code] += 1
         except ValueError as e:
             # Handle the ValueError (could not convert to integer)
-            print()
+            sys.stdout.write('')
         except IndexError as e:
             # Handle the IndexError (not enough elements in 'words')
             print("IndexError occurred: {}".format(e))
