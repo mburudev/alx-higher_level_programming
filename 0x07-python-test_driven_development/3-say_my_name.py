@@ -1,27 +1,25 @@
-def print_square(size):
-    """
-    Print a square with the character #.
+#!/usr/bin/python3
+"""Module for say_my_name method."""
+
+
+def say_my_name(first_name, last_name=""):
+    """Method for printing first and last name.
 
     Args:
-        size (int): The size length of the square.
+        first_name: first name str.
+        last_name: last name str.
 
     Raises:
-        TypeError: If size is not an integer or if it is a float less than 0.
-        ValueError: If size is less than 0.
-
+        TypeError: if none of the names are strings.
     """
-    # Check if size is an integer
-    if not isinstance(size, int):
-        raise TypeError("size must be an integer")
+    if not isinstance(first_name, str):
+        raise TypeError("first_name must be a string")
 
-    # Check if size is a float less than 0
-    if isinstance(size, float) and size < 0:
-        raise TypeError("size must be an integer")
+    if not isinstance(last_name, str):
+        raise TypeError("last_name must be a string")
 
-    # Check if size is less than 0
-    if size < 0:
-        raise ValueError("size must be >= 0")
+    print("My name is {:s} {:s}".format(first_name, last_name))
 
-    # Print the square
-    for _ in range(size):
-        print('#' * size)
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/3-say_my_name.txt")
