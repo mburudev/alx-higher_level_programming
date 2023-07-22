@@ -102,14 +102,16 @@ class Rectangle:
             int: The perimeter of the rectangle.
 
         """
-        return 2 * (self._width + self._height) if self._width and self._height else 0
+        return 2 * (self._width + self._height) if self._width and \
+            self._height else 0
 
     def __str__(self):
         """
         Returns a string representation of the rectangle.
 
         If width or height is 0, returns an empty string.
-        Otherwise, returns a string with the rectangle represented by '#' characters.
+        Otherwise, returns a string with the rectangle represented \
+            by '#' characters.
 
         Returns:
             str: String representation of the rectangle.
