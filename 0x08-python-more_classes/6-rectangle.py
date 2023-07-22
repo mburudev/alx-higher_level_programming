@@ -7,7 +7,8 @@ class Rectangle:
     Rectangle class represents a rectangle with width and height attributes.
 
     Attributes:
-        number_of_instances (int): Class attribute to track the total number of Rectangle instances.
+        number_of_instances (int): Class attribute to track the \
+            total number of Rectangle instances.
 
     Args:
         width (int): The width of the rectangle (default is 0).
@@ -21,8 +22,10 @@ class Rectangle:
         area(self): Returns the area of the rectangle.
         perimeter(self): Returns the perimeter of the rectangle.
         __str__(self): Returns a string representation of the rectangle.
-        __repr__(self): Returns a string representation to recreate the rectangle using eval().
-        __del__(self): Destructor method that decrements the number_of_instances on instance deletion.
+        __repr__(self): Returns a string representation to recreate \
+            the rectangle using eval().
+        __del__(self): Destructor method that decrements the \
+                number_of_instances on instance deletion.
     """
 
     number_of_instances = 0
@@ -67,7 +70,8 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
     def __str__(self):
-        """Return a string representation of the rectangle using the character '#'."""
+        """Return a string representation of the rectangle \
+            using the character '#'."""
         if self.width == 0 or self.height == 0:
             return ""
         rect_str = ""
@@ -76,10 +80,12 @@ class Rectangle:
         return rect_str[:-1]
 
     def __repr__(self):
-        """Return a string representation of the rectangle to recreate the object."""
+        """Return a string representation of the rectangle \
+            to recreate the object."""
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        """Destructor method called on instance deletion, decrements number_of_instances."""
+        """Destructor method called on instance deletion, decrements \
+            number_of_instances."""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
