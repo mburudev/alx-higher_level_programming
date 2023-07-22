@@ -3,9 +3,7 @@
 Module for log parsing scripts.
 """
 
-
 import sys
-
 
 if __name__ == "__main__":
     size = [0]
@@ -20,8 +18,13 @@ if __name__ == "__main__":
             code = int(words[-2])
             if code in codes:
                 codes[code] += 1
-        except:
-            pass
+        except ValueError as e:
+            # Handle the ValueError (could not convert to integer)
+            print("ValueError occurred: {}".format(e))
+        except IndexError as e:
+            # Handle the IndexError (not enough elements in 'words')
+            print("IndexError occurred: {}".format(e))
+        # Add more specific exceptions as needed
 
     def print_stats():
         '''Prints accumulated statistics.'''
@@ -29,6 +32,7 @@ if __name__ == "__main__":
         for k in sorted(codes.keys()):
             if codes[k]:
                 print("{}: {}".format(k, codes[k]))
+
     i = 1
     try:
         for line in sys.stdin:
