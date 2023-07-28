@@ -11,16 +11,19 @@ class Node:
         next_node (Node): The reference to the next node in the linked list.
 
     Raises:
-        TypeError: If the data is not an integer or if the next_node is not a Node object.
+        TypeError: If the data is not an integer or \
+                if the next_node is not a Node object.
     """
 
     def __init__(self, data, next_node=None):
         """
-        Initialize a new Node object with the given data and optional next_node.
+        Initialize a new Node object with the given \
+                data and optional next_node.
 
         Args:
             data (int): The data to be stored in the node.
-            next_node (Node, optional): The reference to the next node. Defaults to None.
+            next_node (Node, optional): The reference \
+                    to the next node. Defaults to None.
         """
         self.data = data
         self.next_node = next_node
@@ -84,8 +87,10 @@ class SinglyLinkedList:
         head (Node): The head node of the linked list.
 
     Methods:
-        sorted_insert(self, value): Inserts a new Node into the correct sorted position in the list (increasing order).
-        __str__(self): Returns the string representation of the linked list, displaying one node number per line.
+        sorted_insert(self, value): Inserts a new Node into the \
+                correct sorted position in the list (increasing order).
+        __str__(self): Returns the string representation of the \
+                linked list, displaying one node number per line.
     """
 
     def __init__(self):
@@ -96,7 +101,8 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """
-        Insert a new Node into the correct sorted position in the list (increasing order).
+        Insert a new Node into the correct sorted position \
+                in the list (increasing order).
 
         Args:
             value (int): The value to be stored in the new node.
@@ -107,7 +113,8 @@ class SinglyLinkedList:
             self.head = new_node
         else:
             current = self.head
-            while current.next_node is not None and current.next_node.data < value:
+            while current.next_node is not None and \
+                    current.next_node.data < value:
                 current = current.next_node
             new_node.next_node = current.next_node
             current.next_node = new_node
@@ -117,7 +124,8 @@ class SinglyLinkedList:
         Returns the string representation of the linked list.
 
         Returns:
-            str: The string representation of the linked list, with one node number per line.
+            str: The string representation of the linked \
+                    list, with one node number per line.
         """
         result = ""
         current = self.head
