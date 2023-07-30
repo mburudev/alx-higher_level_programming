@@ -3,15 +3,12 @@
 more class base
 """
 
-
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 """
 Square class
 """
-
-
 class Square(Rectangle):
     """ Square Class """
     def __init__(self, size):
@@ -20,7 +17,8 @@ class Square(Rectangle):
             raise TypeError("size must be an integer")
         if size <= 0:
             raise ValueError("size must be greater than 0")
-        super().__init__(size, size)
+        self.__size = size
+        super().__init__(self.__size, self.__size)
 
     def __str__(self):
-        return "[Square] {}/{}".format(self.width, self.height)
+        return "[Square] {}/{}".format(self.__size, self.__size)
