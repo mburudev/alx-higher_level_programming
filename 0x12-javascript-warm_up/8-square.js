@@ -9,7 +9,7 @@ if (isNaN(numArg)) {
   for (let a = 0; a < numArg; a++) {
     let output = '';
     for (let i = 0; i < numArg; i++) {
-      output += 'x';
+      output += 'X';
     }
     console.log(output);
   }
