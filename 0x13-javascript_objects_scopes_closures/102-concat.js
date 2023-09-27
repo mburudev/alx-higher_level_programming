@@ -1,12 +1,14 @@
 #!/usr/bin/node
 const fs = require('fs');
-const path = require('path');
 
 function concatenateFiles (sourceFilePath1, sourceFilePath2, destinationFilePath) {
   try {
     const data1 = fs.readFileSync(sourceFilePath1, 'utf8');
     const data2 = fs.readFileSync(sourceFilePath2, 'utf8');
-    const concatenatedData = data1 + data2;
+    const sentences = (data1 + data2).split('. ');
+
+    const concatenatedData = sentences.map((sentence, index) => index === 0 ? sentence.trim() : sentence.replace(/\s+/g, ' ')).join('.\n');
+
     fs.writeFileSync(destinationFilePath, concatenatedData, 'utf8');
     console.log(`${concatenatedData}`);
   } catch (err) {
