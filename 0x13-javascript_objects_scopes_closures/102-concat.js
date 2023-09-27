@@ -7,7 +7,7 @@ function concatenateFiles (sourceFilePath1, sourceFilePath2, destinationFilePath
     const data2 = fs.readFileSync(sourceFilePath2, 'utf8');
     const sentences = (data1 + data2).split('. ');
 
-    const concatenatedData = sentences.map((sentence, index) => index === 0 ? sentence.trim() : sentence.replace(/\s+/g, ' ')).join('.\n');
+    const concatenatedData = sentences.map((sentence, index) => index === 0 ? sentence.trim() : sentence.replace(/\s+/g, ' ')).join('\n'); // Changed '.\n' to '\n'
 
     fs.writeFileSync(destinationFilePath, concatenatedData, 'utf8');
     console.log(`${concatenatedData}`);
